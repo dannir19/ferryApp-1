@@ -7,6 +7,7 @@ public class ScreenManager { // zarzadza na naszych wszystkich klasach
     private final MainScreen mainScreen = new MainScreen();
     private final TicketScreen ticketScreen = new TicketScreen();
     private final ExitScreen exitScreen = new ExitScreen();
+    private final PersonScreen personScreen = new PersonScreen();
 
 //    public ScreenManager(){};
 
@@ -18,6 +19,7 @@ public class ScreenManager { // zarzadza na naszych wszystkich klasach
             chosenScreen = chooseScreen(chosenScreen);
         }
     }
+
     private int chooseScreen(int chosenScreen) {
 
         if (chosenScreen == 0) {
@@ -26,12 +28,17 @@ public class ScreenManager { // zarzadza na naszych wszystkich klasach
         if (chosenScreen == 1) {
             return ticketScreen.interact();
         }
-        if(chosenScreen == 2) {
-            return exitScreen.interact();
+        if (chosenScreen == 2) {
+            return exitScreen.interact(); }
+
+        if (chosenScreen == 5) {
+                return personScreen.interact();
+            }
+            return mainScreen.interact();
         }
-        return mainScreen.interact();
     }
-}
+
+
 
 
 //    private final TicketScreen ticketScreen = new TicketScreen();

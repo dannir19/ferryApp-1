@@ -13,6 +13,7 @@ public class TicketScreen implements Screen {
         System.out.println(" 2. Opłata za transport");
         System.out.println(" 3. Opłata za bagaż");
         System.out.println(" 4. Powrót do głównego menu ");
+        System.out.println(" 5. Dodaj osobę do rejsu ");
         int typBiletu = in.nextInt();
         switch (typBiletu) {
             case 1: {
@@ -26,6 +27,8 @@ public class TicketScreen implements Screen {
                 break; }
             case 4:
                 return 0;
+            case 5: {
+                return 5; }
         }
         return 1;
     }
