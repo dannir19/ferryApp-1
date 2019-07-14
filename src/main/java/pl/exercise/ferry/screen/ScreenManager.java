@@ -26,6 +26,9 @@ public class ScreenManager { // zarzadza na naszych wszystkich klasach
         if (chosenScreen == 1) {
             return ticketScreen.interact();
         }
+        if(chosenScreen == 2) {
+            return exitScreen.interact();
+        }
         return mainScreen.interact();
     }
 }
