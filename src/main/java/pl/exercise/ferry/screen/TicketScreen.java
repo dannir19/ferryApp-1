@@ -6,7 +6,8 @@ public class TicketScreen implements Screen {
 
     private final Scanner in = new Scanner(System.in);
 
-    public int ticket() {
+    @Override
+    public int interact() { // ScreenName
         System.out.println(" Wybierz typ biletu:");
         System.out.println(" 1. Dla osoby");
         System.out.println(" 2. Opłata za transport");
@@ -27,14 +28,6 @@ public class TicketScreen implements Screen {
                 return 0;
         }
         return 1;
-    }
-
-    @Override
-    public int interact() { // ScreenName
-        ticket();
-        int age = in.nextInt();
-        int cena = chooseTicket(age);
-        return 1; //ScreenName.mainscreen
     }
     private int personTicket() {
         System.out.println("Ile Masz lat?");
